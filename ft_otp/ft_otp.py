@@ -103,7 +103,7 @@ if __name__=='__main__':
 	elif args.key:
 		try:
 			print('Código de control:	', check_otp(get_file(args.key)))
-			print('Código generado:	', create_otp(get_file(args.key)))
+			print('Código generado:	 {:06d}'.format(create_otp(get_file(args.key))))
 		except:
 			print('ERROR: OTP password generation failed.')
 	elif args.delete:
